@@ -1,0 +1,16 @@
+/* selector: pseodo-class{
+    property:value;
+} */
+
+button{
+
+background: red;
+color: white;
+
+padding: 10px 20px;
+
+}
+
+button:hover{
+    background: grey;
+}
