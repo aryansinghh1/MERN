@@ -24,10 +24,22 @@ text-align: center;
 }
 
 .id{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
 }
 .id2{
-    
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+.aryan{
+    font-size: 4rem;
+    text-align: center;
+
 }
