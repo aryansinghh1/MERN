@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Website</title>
+</head>
+<body>
+
+<header>
+    <h1>Student Information Portal</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a> |
+    <a href="#courses">Courses</a> |
+    <a href="#table">Student Table</a> |
+    <a href="#register">Registration Form</a> |
+    <a href="#faq">FAQ</a>
+</nav>
+
+<section id="home">
+    <h1>Welcome Students</h1>
+    <p>This portal helps students manage their <strong>academic information</strong> and explore <span>learning opportunities</span>.</p>
+</section>
+
+<section id="courses">
+    <h2>Available Courses</h2>
+    <ul>
+        <li>Computer Science</li>
+        <li>Information Technology</li>
+        <li>Electronics</li>
+        <li>Mechanical</li>
+    </ul>
+
+    <h3>Learning Steps</h3>
+    <ol>
+        <li>Enroll in course</li>
+        <li>Attend classes</li>
+        <li>Complete assignments</li>
+        <li>Appear for exams</li>
+    </ol>
+</section>
+
+<section id="table">
+    <h2>Student Details</h2>
+    <table border="1">
+        <caption>Student Marks Table</caption>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Aryan</td>
+            <td>Singh</td>
+            <td>Computer Science</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Som</td>
+            <td>Yadav</td>
+            <td>IT</td>
+            <td>90</td>
+        </tr>
+    </table>
+</section>
+
+<section id="register">
+    <h2>Student Registration</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male"  value="male" >
+        <label for="male">Male </label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female </label><br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript<br><br>
+
+        <label>Course:</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Computer Science</option>
+            <option>IT</option>
+            <option>Electronics</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</section>
+
+<section id="faq">
+    <h2>FAQ</h2>
+
+    <details>
+        <summary>What is this portal for?</summary>
+        <p>It is used to manage student academic information.</p>
+    </details>
+
+    <details>
+        <summary>How to register?</summary>
+        <p>Fill the registration form and submit.</p>
+    </details>
+
+    <details>
+        <summary>Is this website free?</summary>
+        <p>Yes, it is completely free for students.</p>
+    </details>
+</section>
+
+<footer>
+    © 2026 Student Portal
+</footer>
+
+</body>
+</html>
