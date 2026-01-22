@@ -1,0 +1,31 @@
+.box{    
+    height: 400px;
+    width: 400px; 
+    background-color: antiquewhite;
+    margin: 100px;
+    border: 1px solid darkgray;
+    text-align: center;
+    padding: 50px;
+    
+
+}
+.name{
+
+color: rgb(39, 55, 58);
+}
+
+.fr{
+
+    color: rgb(132, 222, 232);
+}
+
+.box3{
+    margin-left: 100px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.bt{
+    background-color: red;
+}
