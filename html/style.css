@@ -6,9 +6,28 @@
 }
 #four{
     
+    
 }
 
 #five{
-    align-items: center;
+
+
+    
+}
+.two{
+    color: aquamarine !important;
+}
+
+#six{
+    background-color: aqua;
+text-align: center;
+}
+
+.id{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+.id2{
     
 }
