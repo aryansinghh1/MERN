@@ -14,3 +14,25 @@ padding: 10px 20px;
 button:hover{
     background: grey;
 }
+
+a:visited{
+    color: blueviolet;
+}
+
+a{
+    color: blue;
+}
+a:hover{
+    color: red;
+}
+
+input:focus{
+    /* background: rgb(212, 211, 214); */
+    /* color: red; */
+    border: 2px solid green;
+    
+}
+
+li:first-child{
+    color: red;
+}
