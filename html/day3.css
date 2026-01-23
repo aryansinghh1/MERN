@@ -49,6 +49,7 @@
 
 
 .box-two{
+    margin: 20px;
 
     width: 300px;
     height: 150px;
@@ -59,8 +60,44 @@
 
 }
 
+
+
+/* @media (condition){
+
+} */
+
+
+
 @media(max-width:600px){
     .box-two{
+        background-color: orange;
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.box-three{
+    margin: 20px;
+    width: 300px;
+    height: 150px;
+    background-color: steelblue;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+
+}
+
+
+
+@media(max-width:600px){
+    .box-two{
+        background-color: orange;
+        width: 100%;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .box-three{
         background-color: orange;
         width: 100%;
         font-size: 16px;

@@ -1,0 +1,24 @@
+.container{
+    background: black;
+    color: white;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+
+
+}
+
+.container2{
+
+    display: flex;
+    column-gap: 20px;
+    
+}
+
+.box:hover{
+
+    color: brown;
+    
+}
+
