@@ -1,0 +1,59 @@
+.nav{
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed; 
+
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.div2{
+
+    background-color: rgb(252, 177, 79);
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: sticky;
+    top: 40px;
+}
+
+.sale{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 40px;
+    width: 200px;
+    position: relative;
+}
+
+.price{
+    line-height: 50px;
+}
+
+.red{
+
+    font-size: small;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: red;
+    width: 30px;
+    padding: 2px;
+    border-radius: 5px;
+    position: absolute ;
+    top: -5px;
+    right: -5px;
+}
+
+
+.box-four{
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    border: 2px solid black;
+    margin: 10px;
+    margin-top: 50px;
+}
+
