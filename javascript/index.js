@@ -46,12 +46,63 @@
 
 // string length
 
-let message = "hello";
-console.log(message.length);
-console.log(message.toLowerCase);
-console.log(message.toUpperCase);
+// template literal
+
+// let name = "ankit";
+// let age  = 24;
+
+// console.log(`Hey my name is ${name} and my age is ${age}`);
+
+// scope
+
+// let z = 10;
+
+// function test(){
+//     let f = 7;
+//     console.log(z);
+//     console.log(f);
+
+// }
+// test();
+// console.log(z);
+// console.log(f);
 
 
+// if(true){
+//     var x = 11;
+//     let y = 22;
+// }
 
+// console.log(x);
+// console.log(y);
+
+
+// == and ===
+
+// console.log(5 == "5");
+// console.log(5 === "5");
+
+// for off
+
+// let arr = [10,20,30,40,50];
+
+// for(let value of arr){
+    // console.log(value)
+// }
+
+
+// for in
+
+// let obj = {name:"ankit",age:26};
+
+// for(let key in obj){
+//     console.log(key)
+// }
+
+
+// for(let i = 1; i<=5;i++);
+// {
+//     console.log(i)
+// }
 
 
