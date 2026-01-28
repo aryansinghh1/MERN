@@ -1,8 +1,10 @@
-// let a = 25;
-// let name = "aryan";
-// let isStudent = true;
-// let x;
-// let y = null;
+//Datatypes
+
+// let a = 25;  //number
+// let name = "aryan";   //string
+// let isStudent = true;  //boolean
+// let x;  //undefined
+// let y = null;  //null
 
 // console.log(a);
 // console.log(name);
@@ -10,17 +12,18 @@
 // console.log(y);
 
 
-// // typeof
+// typeof
 // console.log(typeof a);
 // console.log(typeof name);
 // console.log(typeof isStudent);
+// console.log(typeof x);
 // console.log(typeof y);
 
-// // ARITHMATIC OPERATION
+// ARITHMATIC OPERATION
 
 // let num1 = 6;
 // let num2 = 10
-// let char = "xyz"
+// let char = "xyz";
 
 // console.log(num1 + num2);
 // console.log(num1 - num2);
@@ -28,6 +31,8 @@
 // console.log(num1 % num2);
 // console.log(num1 * num2);
 // console.log(char / num1);
+// console.log("2"+1);
+// console.log("2"-1);
 
 
 // // number conversion
@@ -45,6 +50,7 @@
 // console.log(s1+ " " + s2 + " " + s3);
 
 // string length
+// console.log(name.length);
 
 // template literal
 
@@ -80,6 +86,12 @@
 // == and ===
 
 // console.log(5 == "5");
+// console.log(0 == false);
+// console.log(" " ==false);
+// console.log(" " == true);
+// console.log([] == 0);
+
+
 // console.log(5 === "5");
 
 // for off
@@ -99,10 +111,30 @@
 //     console.log(key)
 // }
 
-
+// for(initialization;condition;updation)
 // for(let i = 1; i<=5;i++);
 // {
 //     console.log(i)
 // }
+
+// for each loop // applies on array
+
+
+// while loop
+
+// let a = 0;
+
+// while(a<10){
+//     if(a%2==0){
+//         console.log(a);
+//     }
+//     a++;
+    
+// }
+
+
+
+//Functions
+
 
 
