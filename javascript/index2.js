@@ -73,3 +73,14 @@
 // fn();
 
 
+// Array methods
+
+
+// let number = [3,2,4,5,6,3,5,6,7,3,2,5,6,3];
+
+// number.forEach(function(num){
+//     console.log(num);
+// });
+
+
+
