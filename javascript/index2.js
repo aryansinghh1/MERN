@@ -76,12 +76,75 @@
 // Array methods
 
 
-// let number = [3,2,4,5,6,3,5,6,7,3,2,5,6,3];
+let numbers = [1,2,3,4,5,6,7,8,9];
 
-// number.forEach(function(num){
+// numbers.forEach(function(num){
 //     console.log(num);
 // });
 
 
 
 //map
+
+//syntax  
+// array.map(function(element,index,array){
+//return.newValue;
+// });
+
+
+// let result = numbers.map(function(num) {
+//     return num * 2;
+// });
+
+
+// let result = numbers.map((num)=> num * num);
+// console.log(result);
+
+
+//filter return those element which satify the condition
+// array.filter(function(element, index, array) {
+//     return condition; // true → keep element, false → remove
+// });
+
+
+
+// let even = numbers.filter(function(num){
+
+//     return num % 3 === 0;
+// });
+
+// console.log(even);
+
+
+//reduce function  //a function that takes input values, 
+// combine them and produce a single output value.
+
+
+// let sum = numbers.reduce(function(acc , curr){
+//     return acc + curr;
+// });
+
+// console.log(sum);
+
+
+
+
+//set interval    //setInterval(function, timeInMillisecond);
+// function name(){
+//     console.log("Aryan");
+// };
+
+// setInterval(name,1000);
+
+
+
+console.log("b");
+
+console.log("a");
+console.log("c");
+
+
+
+//async     //task that take time
+            //  but don't block the program.
+
