@@ -234,28 +234,50 @@
 
 
 
-const promiseFour = new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        let error = false;
-        if(!error){
-            resolve({name : "aryan", city :"jalandhar"});
-        }
-        else{
-            reject("Error something is went wrong");
-        }
-    },2000)
-})
+// const promiseFour = new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         let error = false;
+//         if(!error){
+//             resolve({name : "aryan", city :"jalandhar"});
+//         }
+//         else{
+//             reject("Error something is went wrong");
+//         }
+//     },2000)
+// })
 
-promiseFour
-.then((user)=>{
-    console.log(user);
-    return user.name;
-})
+// promiseFour
+// .then((user)=>{        //resolve
+//     console.log(user);
+//     return user.name;
+// })
 
-.then((city)=>{
-    console.log(city);
-})
+// .then((varcity)=>{     //reject
+//     console.log(varcity);
+// })
 
-.catch((err) => {
-    console.log(err);
+// .catch((err) => {
+//     console.log(err);
+// })
+
+
+//fetch 
+//
+
+// function fetch(url){
+//     return new Promise((resolve,reject)=>{
+//         // browser starts http request in background (web APIs)
+//         //when repose comes:
+//         resolve(ResponseObject);
+//         //or if network fails:
+//         reject(error);
+//     });
+    
+// }
+
+
+fetch("https://jsonplaceholder.typicode.com/users").then((response)=>{
+    return response.json()
+}).then((data)=>{
+    console.log(data);
 })
