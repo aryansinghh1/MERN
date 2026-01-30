@@ -38,11 +38,24 @@ function renderProducts(products) {
     });
 }
 
+let btn = document.getElementById("btn");
+let inputbox = document.getElementById("inputbox");
+
+console.log(btn,inputbox);
+
+btn.addEventListener("click",()=>{
+    let query = inputbox.value;
+    console.log("btn is clicked", query);
+    console.log("query ",query);
+    window.location.href = `search.html?q=${query}`;
+    inputbox.value = "";
+
+})
 // Search button
-document.getElementById("btn").addEventListener("click", () => {
-    let searchText = document.getElementById("inputbox").value.trim();
+// document.getElementById("btn").addEventListener("click", () => {
+//     let searchText = document.getElementById("inputbox").value.trim();
 
-    if (searchText === "") return;
+//     if (searchText === "") return;
 
-    window.open(`search.html?query=${encodeURIComponent(searchText)}`, "_blank");
-});
+//     window.open(`search.html?query=${encodeURIComponent(searchText)}`, "_blank");
+// });
