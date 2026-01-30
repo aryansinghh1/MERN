@@ -76,7 +76,7 @@
 // Array methods
 
 
-let numbers = [1,2,3,4,5,6,7,8,9];
+// let numbers = [1,2,3,4,5,6,7,8,9];
 
 // numbers.forEach(function(num){
 //     console.log(num);
@@ -138,13 +138,124 @@ let numbers = [1,2,3,4,5,6,7,8,9];
 
 
 
-console.log("b");
+// console.log("b");
 
-console.log("a");
-console.log("c");
+// console.log("a");
+// console.log("c");
+
+
 
 
 
 //async     //task that take time
             //  but don't block the program.
 
+
+
+
+//callback hell            
+//
+// function getUser(callback) {
+//     setTimeout(() => {
+//         console.log("user fetched");
+//         callback();
+//     }, 1000);
+// }
+
+// function getPosts(callback) {
+//     setTimeout(() => {
+//         console.log("Posts fetched");
+//         callback();
+//     }, 1000);
+// }
+
+// function getComments(callback) {
+//     setTimeout(() => {
+//         console.log("Comments fetched");
+//         callback();
+//     }, 1000);
+// }
+
+// getUser(()=>{
+//     getPosts(()=>{
+//         getComments(()=>{
+//             console.log("All data fetched");
+//         })
+//     })
+// })
+
+
+//fetch is function which return prpomises
+
+
+//promises
+//
+// const promiseOne = new Promise(function(resolve,reject){
+
+//     setTimeout(()=>{
+
+//         console.log("async task is created")
+//         resolve();
+//     },1000)
+// })
+
+// promiseOne.then(()=>{
+//     console.log("Promise consumed");
+// })
+
+
+
+//without storing in any variable
+//
+// new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("hello");
+//         resolve();
+//     },3000);
+
+// }).then(function(){
+//     console.log("async task2 completed");
+// })
+
+
+
+//promises using object
+//
+// const promiseThree = new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         console.log("task three");
+//         resolve({name : "aryan", city :"jalandhar"});
+//     },2000);
+// })
+
+// promiseThree.then(function(user){
+//     console.log(user);
+// });
+
+
+
+const promiseFour = new Promise(function(resolve,reject){
+    setTimeout(()=>{
+        let error = false;
+        if(!error){
+            resolve({name : "aryan", city :"jalandhar"});
+        }
+        else{
+            reject("Error something is went wrong");
+        }
+    },2000)
+})
+
+promiseFour
+.then((user)=>{
+    console.log(user);
+    return user.name;
+})
+
+.then((city)=>{
+    console.log(city);
+})
+
+.catch((err) => {
+    console.log(err);
+})
