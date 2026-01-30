@@ -1,2 +1,5 @@
-let titles = products.map(product => product.title);
-    console.log(titles);
+card.appendChild(img);
+        // card.appendChild(title);
+        // card.appendChild(para);
+        
+        // container.appendChild(card);
