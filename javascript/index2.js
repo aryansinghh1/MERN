@@ -276,8 +276,32 @@
 // }
 
 
-fetch("https://jsonplaceholder.typicode.com/users").then((response)=>{
-    return response.json()
-}).then((data)=>{
-    console.log(data);
+// fetch("https://jsonplaceholder.typicode.com/users").then((response)=>{
+//     return response.json()
+// }).then((data)=>{
+//     console.log(data);
+// })
+
+
+
+
+
+
+
+
+
+fetch("https://dummyjson.com/products")
+.then(res => res.json())
+.then(data => {
+    const products = data.products;
+    console.log("Full data:", data);
+    console.log("Products:", products);
+    return products;   // ✅ IMPORTANT
 })
+.then(products => {
+    console.log("Received in next then:", products);
+    console.log("First product:", products[0]);
+})
+.catch(err => {
+    console.log("Error:", err);
+});
