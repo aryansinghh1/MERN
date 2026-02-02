@@ -3,7 +3,7 @@
 
 // const { subtract } = require("./math");
 
-//es6 js
+//es6 js module
 
 import {add, subtract} from "./math.js"
 
