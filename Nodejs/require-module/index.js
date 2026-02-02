@@ -26,7 +26,7 @@
 import fs from "fs";
 import { Performance } from "perf_hooks";
 
-console.log("//////////////");
+// console.log("//////////////");
 
 const start = performance.now();
 
