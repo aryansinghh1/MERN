@@ -22,4 +22,9 @@ emmiter.on("trig",()=>{
     console.log("Your order is delivered");
 })
 
-emmiter.emit("trig");
+function order(){
+    
+    emmiter.emit("trig");
+}
+
+order();
