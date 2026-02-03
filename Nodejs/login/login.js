@@ -1,17 +1,21 @@
-import { error } from "console";
-import { sign } from "crypto";
+
 import EventEmitter from "events";
 
+// create event emmiter
 const emitter = new EventEmitter();
 
+
+//success listener
 emitter.on("loginSuccess",()=>{
     console.log("Login Successfull");
 })
 
+//Error listener (IMPORTANT)
 emitter.on("error",(err)=>{
     console.log("Error ❌ ",err.message);  
 })
 
+// login function
 function login(isLoggedIn){
     console.log("Checking login status..");
 
@@ -30,4 +34,6 @@ function login(isLoggedIn){
     }
 }
 
-login(false);
+//test cases
+login(true);
+// login(false);
