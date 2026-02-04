@@ -22,12 +22,12 @@ function getRequestBody(req) {
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Type", "application/json");
 
-  // GET -> Fetch all users
+  // GET
   if (req.url === "/users" && req.method === "GET") {
     res.end(JSON.stringify(users));
   }
 
-  // POST -> Create new user
+  // POST
   else if (req.url === "/users" && req.method === "POST") {
     const data = await getRequestBody(req);
 
@@ -37,15 +37,13 @@ const server = http.createServer(async (req, res) => {
     };
 
     users.push(newUser);
-
     res.statusCode = 201;
     res.end(JSON.stringify(newUser));
   }
 
-  // PUT -> Update user
+  // PUT
   else if (req.url === "/users" && req.method === "PUT") {
     const data = await getRequestBody(req);
-
     const user = users.find((u) => u.id === data.id);
 
     if (!user) {
@@ -56,13 +54,35 @@ const server = http.createServer(async (req, res) => {
 
     user.name = data.name;
     res.end(JSON.stringify(user));
-  } else if (req.url === "/users" && req.method === "DELETE") {
+  }
+
+  // PATCH  ✅ (NEW)
+  else if (req.url === "/users" && req.method === "PATCH") {
     const data = await getRequestBody(req);
+    const user = users.find((u) => u.id === data.id);
 
+    if (!user) {
+      res.statusCode = 404;
+      res.end(JSON.stringify({ message: "user not found" }));
+      return;
+    }
+
+    if (data.name !== undefined) {
+      user.name = data.name;
+    }
+
+    res.end(JSON.stringify(user));
+  }
+
+  // DELETE
+  else if (req.url === "/users" && req.method === "DELETE") {
+    const data = await getRequestBody(req);
     users = users.filter((u) => u.id !== data.id);
-
     res.end(JSON.stringify({ message: "user delete" }));
-  } else {
+  }
+
+  // 404
+  else {
     res.statusCode = 404;
     res.end(JSON.stringify({ message: "Route not found" }));
   }
@@ -71,3 +91,5 @@ const server = http.createServer(async (req, res) => {
 server.listen(3000, () => {
   console.log("Server running on port 3000");
 });
+
+
