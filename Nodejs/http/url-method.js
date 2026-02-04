@@ -1,5 +1,4 @@
 import http from "http";
-import { use } from "react";
 
 let users = [
   { id: 1, name: "ankit" },
@@ -57,18 +56,13 @@ const server = http.createServer(async (req, res) => {
 
     user.name = data.name;
     res.end(JSON.stringify(user));
-  }
-
-  else if(req.url === "/users" && req.method === "DELETE"){
-
+  } else if (req.url === "/users" && req.method === "DELETE") {
     const data = await getRequestBody(req);
 
     users = users.filter((u) => u.id !== data.id);
 
-    res.end(JSON.stringify({message: "user delete"}));
-    
-  }
-  else {
+    res.end(JSON.stringify({ message: "user delete" }));
+  } else {
     res.statusCode = 404;
     res.end(JSON.stringify({ message: "Route not found" }));
   }
