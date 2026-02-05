@@ -5,21 +5,6 @@ app.get("/",(req,res)=>{
     res.end("Hello world");
 });
 
-app.get("/contact",(req,res)=>{
-    res.end("contact page");
-});
-
-app.get("/about",(req,res)=>{
-    res.end("about");
-});
-
-app.get("/feedback",(req,res)=>{
-    res.end("feedback page");
-});
-
-
-
-
 app.listen(3000,()=>{
     console.log("server is running on port 3000");
 })

@@ -1,8 +1,8 @@
 import express from "express";
 
 const app = express();
-app.get("/",(req,res)=>{
-    res.send("Hello world");
+app.get("/home",(req,res)=>{
+    res.send("home page");
 });
 
 app.get("/contact",(req,res)=>{
@@ -10,7 +10,7 @@ app.get("/contact",(req,res)=>{
 });
 
 app.get("/about",(req,res)=>{
-    res.send("about");
+    res.send("about about");
 });
 
 app.get("/feedback",(req,res)=>{
