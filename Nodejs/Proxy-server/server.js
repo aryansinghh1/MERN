@@ -13,9 +13,10 @@ const server = http.createServer(async (req, res) => {
   if (req.url === "/products") {
     // fetch data from external API
     const apiRes = await fetch("https://dummyjson.com/products");
-    const data = await apiRes.json();
+    const data = await apiRes.json();  //fetch happening on the server not on the browser
 
     //convert data to HTML
+    //api gives json , browser needs html and server does the conversation.
     let productHTML = "";
     data.products.forEach((p) => {
       productHTML += `
@@ -39,7 +40,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  //send css
+  //send css    //css is static browser request it separatly
   if (req.url === "/style.css") {
     res.writeHead(200, { "Content-Type": "text/css" });
     res.end(css);
@@ -59,5 +60,8 @@ const server = http.createServer(async (req, res) => {
   res.end("Not Found");
 });
 
+server.listen(3000,()=>{
+    console.log("Server is running on http://localhost:3000");
+})
 
 //fetch happens on the server not in the browser
