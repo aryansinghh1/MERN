@@ -18,3 +18,13 @@ server.listen(8080,()=>{
   console.log("server is running on port 8080");
 });
 
+
+//server side rendeing means the server generate the full html (with data)
+// and then send it to the browser
+
+//how ssr works step by step
+//-> browser request a page
+//-> server fetch the data
+//-> server generates the full html
+//-> browser recieves ready to view page
+//->
