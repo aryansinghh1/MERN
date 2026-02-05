@@ -2,19 +2,19 @@ import express from "express";
 
 const app = express();
 app.get("/",(req,res)=>{
-    res.end("Hello world");
+    res.send("Hello world");
 });
 
 app.get("/contact",(req,res)=>{
-    res.end("contact page");
+    res.send("contact page");
 });
 
 app.get("/about",(req,res)=>{
-    res.end("about");
+    res.send("about");
 });
 
 app.get("/feedback",(req,res)=>{
-    res.end("feedback page");
+    res.send("feedback page");
 });
 
 
