@@ -10,3 +10,8 @@ export default function Card({ title }) {
 
   return <div style={styleObj}>{title}</div>;
 }
+
+//inline styling with style object
+// ->styles written in js object
+// ->uses camel case
+// -> 
