@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>/without JSX</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- it provides react library to create UI (it creates)  -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>  
+    <!-- to show inside browser (it shows the UI)-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  
   </head>
   <body>
-    <div id="root">
-      <script>
-        const element = React.createElement(
-          "h1",
-          null,
-          "hello Students (NO JSX)",
-        );
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(element);
-      </script>
-    </div>
+
+    <div id="root"></div>  
+    <script>
+      const element = React.createElement(   //this was older or original syntax to create UI using react
+        "h1",  //tag
+        null,  //attribute
+        "hello Students (NO JSX)",  //content
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));  //to control the root
+      root.render(element);  // it will render 
+    </script>
   </body>
 </html>
