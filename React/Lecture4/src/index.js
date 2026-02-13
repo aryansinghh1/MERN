@@ -1,6 +1,7 @@
-import React from "react";   //using es6 module instead of CDN
+import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import "./styles/global.css";
 
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
