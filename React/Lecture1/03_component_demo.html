@@ -12,8 +12,11 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      function Greet() {
-        return <h1>hello students from component</h1>;
+      function Greet() {   //In react component is just a normal javascript function
+                           //function component returns UI
+                           //component = function that returns jsx.
+                           // we always use First letter as capital other wise browser will think that its html.
+        return <h1>hello students from component</h1>; 
       }
 
       const root = ReactDOM.createRoot(document.getElementById("root"));
