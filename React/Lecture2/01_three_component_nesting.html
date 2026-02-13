@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Header() {
+        return (
+          <header
+            style={{
+              position: "sticky",
+              border: "1px solid gray",
+              padding: "10px",
+              backgroundColor: "black",
+              color: "white",
+              textAlign: "center",
+            }}
+          >
+            <h1>My App Header</h1>
+          </header>
+        );
+      }
+
+      function Card(props) {
+        return (
+          <div
+            style={{
+              border: "1px solid gray",
+              borderRadius: "10px",
+              padding: "10px",
+              backgroundColor: "Yellow",
+              marginTop: "10px",
+              height: "65vh",
+              color: "black",
+              textAlign: "center",
+            }}
+          >
+            <p>This is a card component.</p>
+          </div>
+        );
+      }
+
+      function Footer() {
+        return (
+          <footer
+            style={{
+              border: "1px solid gray",
+
+              padding: "10px",
+              backgroundColor: "gray",
+              marginTop: "10px",
+              borderRadius: "10px",
+              color: "black",
+              postion: "relative",
+              bottom: "0",
+              textAlign: "center",
+            }}
+          >
+            <p>This is footer</p>
+          </footer>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <Header />
+            <Card />
+            <Footer />
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
