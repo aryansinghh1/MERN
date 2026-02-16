@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function ContactForm() {
   let tempName = "";
+
   const [name, setName] = useState("");
   //name will store the current name typed in the input
   //setName() -> function used to update name -> when state update component
@@ -14,8 +15,8 @@ export default function ContactForm() {
   }
 
   function handleSubmit() {
-    // alert(`Name: ${name}/nMessage: ${message}`);
-    alert(`Name: ${name}`);
+    alert(`Name: ${name}/nMessage: ${message}`);
+    // alert(`Name: ${name}`);
   }
 
   return (
@@ -29,6 +30,8 @@ export default function ContactForm() {
         }}
         onKeyUp={handleKeyUp}
         onKeyDown={()=>console.log("key Down")}
+        onMouseDown={()=>console.log("mouse down")}
+        onMouseUp={()=>console.log("mouse up")}
       />
 
       <br />
