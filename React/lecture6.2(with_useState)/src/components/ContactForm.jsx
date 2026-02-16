@@ -32,6 +32,7 @@ export default function ContactForm() {
         onKeyDown={()=>console.log("key Down")}
         onMouseDown={()=>console.log("mouse down")}
         onMouseUp={()=>console.log("mouse up")}
+        onMouseOver={()=>console.log("mouse over")}
       />
 
       <br />
