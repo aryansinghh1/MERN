@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+//objects
+
 // export default function ArrayAndObject() {
 //   const [user, setUser] = useState({
 //     name: "aryan",
@@ -37,51 +39,42 @@ import React, { useState } from "react";
 //   );
 // }
 
+// export default function ArrayAndObject() {
+//   const [user, setUser] = useState({
+//     name: "Aryan",
+//     age: 20,
+//     familyMember: {
+//       father: "Papa",
+//       mother: "mummy",
+//       brother: "ritik",
 
+//     },
+//   });
 
+//   function shallowCopy() {
+//     setUser({
+//       ...user, // spread top-level user
+//       name: "Aryan Singh",
+//       age: 21
+//     });
+//   }
 
-
-export default function ArrayAndObject() {
-  const [user, setUser] = useState({
-    name: "Aryan",
-    age: 20,
-    familyMember: {
-      father: "Papa",
-      mother: "mummy",
-      brother: "ritik",
-
-    },
-  });
-
-  function shallowCopy() {
-    setUser({
-      ...user, // spread top-level user
-      name: "Aryan Singh",
-      age: 21
-    });
-  }
-
-  function deepCopy(){
-    setUser({...user,familyMember:{...user.familyMember,father:"father's name",mother:"mother's name"}})
-  }
-  return (
-    <div>
-      <h1>User list</h1>
-      <p>name: {user.name}</p>
-      <p>age: {user.age}</p>
-      <p>Father: {user.familyMember.father}</p>
-      <p>Mother: {user.familyMember.mother}</p>
-      <p>Brother: {user.familyMember.brother}</p>
-      <button onClick={shallowCopy}>Click for shallow copy</button>
-      <button onClick={deepCopy}>Click for deep copy</button>
-    </div>
-  );
-}
-
-
-
-
-
+//   function deepCopy(){
+//     setUser({...user,familyMember:{...user.familyMember,father:"father's name",mother:"mother's name"}})
+//   }
+//   return (
+//     <div>
+//       <h1>User list</h1>
+//       <p>name: {user.name}</p>
+//       <p>age: {user.age}</p>
+//       <p>Father: {user.familyMember.father}</p>
+//       <p>Mother: {user.familyMember.mother}</p>
+//       <p>Brother: {user.familyMember.brother}</p>
+//       <button onClick={shallowCopy}>Click for shallow copy</button>
+//       <button onClick={deepCopy}>Click for deep copy</button>
+//     </div>
+//   );
+// }
 
 // import React, { useState } from "react";
 
@@ -111,3 +104,19 @@ export default function ArrayAndObject() {
 //     </div>
 //   );
 // }
+
+//array
+export default function ArrayAndObject() {
+  const [name, setName] = useState(["React", "Node"]);
+
+  return (
+    <div>
+      <h1>Subject list</h1>
+      <ul>
+        {name.map((name, index) => (
+          <li key={index}> {name} </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
