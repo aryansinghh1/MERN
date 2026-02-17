@@ -7,23 +7,37 @@ export default function Timer() {
   useEffect(() => {
     let interval;
 
-    if(runningTime){
-        interval = setInterval(()=>{
-            setTime(prev => prev + 1);
-        },1000);
+    if (runningTime) {
+      interval = setInterval(() => {
+        setTime((prev) => prev + 1);
+      }, 1000);
     }
-    return()=>{
-        clearInterval(interval);
-    };
-    
-  });
 
-  return  (
+    return () => {
+      clearInterval(interval);
+    };
+  }, [runningTime]); // ✅ add dependency so effect runs when runningTime changes
+
+  const handleStart = () => {
+    setRunningTime(true);
+  };
+
+  const handlePause = () => {
+    setRunningTime(false);
+  };
+
+  const handleReset = () => {
+    setRunningTime(false);
+    setTime(0);
+  };
+
+  return (
     <div>
       <h1>Timer</h1>
-      <button>Start</button>
-      <button>Pause</button>
-      <button>Reset</button>
+      <h2>{time} seconds</h2>
+      <button onClick={handleStart}>Start</button>
+      <button onClick={handlePause}>Pause</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
