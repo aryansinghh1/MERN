@@ -105,12 +105,32 @@ import React, { useState } from "react";
 //   );
 // }
 
+
+
+
 //array
+
+
 export default function ArrayAndObject() {
   const [name, setName] = useState(["React", "Node"]);
 
+  const addItem = () => {
+    setName([...name, "MongoDB","ExpressJs","Node"]); // like push
+  };
+
+  const removeLast = () => {
+    setName(name.slice(0, name.length - 1));
+  };
+
+  const removeNode = () => {
+    setName(name.filter((item) => item !== "Node"));
+  };
+
   return (
     <div>
+      <button onClick={removeLast}>Pop</button>
+      <button onClick={removeNode}>Filter Node</button>
+      <button onClick={addItem}>Add</button>
       <h1>Subject list</h1>
       <ul>
         {name.map((name, index) => (
