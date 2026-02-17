@@ -24,7 +24,7 @@ export default function Toggle() {
   };
 
   return (
-    <div className="container" style={style}>
+    <div style={style}>
       <h2>{dark ? "Dark Mode" : "Light Mode"}</h2>
 
       <button onClick={handleToggle}>Toggle</button>
