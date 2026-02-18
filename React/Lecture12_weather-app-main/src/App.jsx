@@ -1,4 +1,4 @@
-import FetchApi from "./components/fetchApi";
+import FetchApi from "./components/FetchApi";
 
 export default function App() {
   return (
