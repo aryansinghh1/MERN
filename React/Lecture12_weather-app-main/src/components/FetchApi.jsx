@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function FetchApi() {
-  const [weather, setWeather] = useState([]);
+  // const [weather, setWeather] = useState([]);
 
   useEffect(() => {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=28.61&longitude=77.23&current_weather=true")
