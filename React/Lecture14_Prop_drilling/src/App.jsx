@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import Parent from './components/Parent'
+import { useState } from "react";
+import Parent from "./components/Parent";
+import { UserContext } from "./context/UserContext";
 
 export default function App() {
-  const [user, setUser] = useState("aryan")
+  const [user, setUser] = useState("aryan");
 
   return (
-   <div>
-    <h1>Prop drilling</h1>
-    <Parent user = {user}/>
-   </div>
-  )
+    <UserContext.Provider value={{ user, setUser }}>
+      <h1>Prop drilling</h1>
+      <Parent />
+    </UserContext.Provider>
+  );
 }
