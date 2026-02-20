@@ -7,10 +7,10 @@ export function AppProvider({ children }) {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setTheme((prev = prev === "light" ? "dark" : "light"));
+    setTheme(prev => (prev === "light" ? "dark" : "light"));
   };
 
-  const value = { user, setUser, theme, setTheme };
+  const value = { user, setUser, theme, setTheme, toggleTheme };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
