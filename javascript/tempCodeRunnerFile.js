@@ -1,9 +1,5 @@
-function add(a, b) {
-//   return a + b;
-// }
+setTimeout(()=>{
 
-// function calcultion(a, b, operation) {
-//   return operation(a, b);
-// }
-
-// console.log(calcultion(4, 5, add));
+        console.log("async task is created")
+        resolve();
+    },1000)

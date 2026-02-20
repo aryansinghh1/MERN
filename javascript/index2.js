@@ -190,6 +190,43 @@
 
 //promises
 //
+
+
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("user fetched");
+            resolve();
+        }, 1000);
+    });
+}
+
+function getPosts() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Posts fetched");
+            resolve();
+        }, 1000);
+    });
+}
+
+function getComments() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Comments fetched");
+            resolve();
+        }, 1000);
+    });
+}
+
+
+getUser()
+.then(() => getPosts())
+.then(() => getComments())
+.then(() => console.log("All data fetched"));
+
+
+
 // const promiseOne = new Promise(function(resolve,reject){
 
 //     setTimeout(()=>{
