@@ -1,15 +1,20 @@
-import { AppProvider } from "./context/AppContext";
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import { SearchProvider } from "./context/SearchContext";
+import useUser from "./hooks/useUser";
+import { Toaster } from "react-hot-toast";
+
 
 export default function App() {
+  const users = useUser();
   return (
-    <AppProvider>
-      <SearchProvider>
-        <Header />
-        <SearchBar />
-      </SearchProvider>
-    </AppProvider>
+   <div style={{padding:40}}>
+    <Toaster position="top-right"/>
+    <h1>Axios Instance Demo</h1>
+    <h3>User List:</h3>
+
+    <ul>
+      {users.map((user)=>(
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+   </div>
   );
 }
