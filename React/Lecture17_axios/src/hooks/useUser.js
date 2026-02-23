@@ -4,9 +4,10 @@ import { showError,showSuccess,showInfo } from "../utils/toast";
 
 export default function useUser() {
   const [users, setUsers] = useState([]);
-
+  const [isLoading, setIsLoading] = useState([false]);
   useEffect(() => {
     async function fetchUsers() {
+      setIsLoading(true);
       try {
         showInfo("Fetching users...");
 
@@ -17,10 +18,12 @@ export default function useUser() {
       } catch (error) {
         showError("Failed to fetch users");
         console.error(error);
+      }finally{
+        setIsLoading(false);
       }
     }
 
     fetchUsers();
   }, []);
-  return users;
+  return {users,isLoading};
 }
