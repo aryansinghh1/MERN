@@ -8,3 +8,22 @@ div p{
     font-size: 3em;
 
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar is 200px, Main takes rest */
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  
+  /* The "Map" */
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+/* Assigning nicknames to items */
+header { grid-area: header; }
+nav    { grid-area: sidebar; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
