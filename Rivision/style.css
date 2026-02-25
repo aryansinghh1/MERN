@@ -4,7 +4,7 @@ h3{
 }
 
 div p{
-    color: blue;
+    /* color: blue; */
     font-size: 3em;
 
 }
@@ -23,7 +23,7 @@ div p{
 }
 
 /* Assigning nicknames to items */
-header { grid-area: header; }
-nav    { grid-area: sidebar; }
-main   { grid-area: main; }
-footer { grid-area: footer; }
+header { grid-area: header; background-color: red;}
+.nav1    { grid-area: sidebar;background-color: blue; }
+main   { grid-area: main; background-color: green; }
+footer { grid-area: footer;background-color: yellow; }
