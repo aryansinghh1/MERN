@@ -70,11 +70,13 @@
 // const fn = obj.greet;
 // console.log(fn());
 
-const obj = {
-    name: "Ankit",
-    greet: function(){
-        console.log(this.name);
-    }
-}
-setTimeout(obj.greet, 0);
+// const obj = {
+//     name: "Ankit",
+//     greet: function(){
+//         console.log(this.name);
+//     }
+// }
+// setTimeout(obj.greet, 0);
 // obj.greet();
+
+

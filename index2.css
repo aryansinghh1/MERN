@@ -1,0 +1,37 @@
+.face{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    border: black 1px solid;
+}
+
+.eye1{
+position: sticky;
+height: 10px;
+width: 10px;
+background-color: black;
+border-radius: 50%;
+top: 25px;
+left: 18px;
+}
+.eye2{
+position: sticky;
+height: 10px;
+width: 10px;
+background-color: black;
+border-radius: 50%;
+top: 25px;
+left: 40px;
+}
+
+.lip{
+position: sticky;
+height: 10px;
+width: 20px;
+background-color: black;
+border-radius: 70%;
+top: 43px;
+left: 24px;
+}

@@ -37,16 +37,16 @@
 // });
 
 // callback function  a function take another function as argument
-// function greet(name){
-//     console.log("hello "+ name);
-// };
+function greet(name){
+    console.log("hello "+ name);
+};
 
-// function processUser(callback){
-// let name = "Aryan";
-// callback(name);
-// };
+function processUser(callback){
+let name = "Aryan";
+callback(name);
+};
 
-// processUser(greet);
+processUser(greet);
 
 // setTimeout(()=>{
 //     console.log("Executed after one Three: Hello");
